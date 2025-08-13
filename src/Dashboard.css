@@ -1,0 +1,516 @@
+/* Dashboard.css */
+
+.dashboard {
+    min-height: 100vh;
+    background-color: #f9fafb;
+    padding: 1rem;
+  }
+  
+  .dashboard-container {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  
+  /* Header Styles */
+  .header-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .header-title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+  }
+  
+  .header-subtitle {
+    color: #6b7280;
+    margin: 0.25rem 0 0 0;
+  }
+  
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .date-display {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #6b7280;
+  }
+  
+  .date-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+  
+  .refresh-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #2563eb;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .refresh-button:hover {
+    background-color: #1d4ed8;
+  }
+  
+  .refresh-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .refresh-icon {
+    width: 1rem;
+    height: 1rem;
+  }
+  
+  .spinning {
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  /* Error Styles */
+  .error-card {
+    background-color: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .error-content {
+    display: flex;
+    gap: 0.75rem;
+  }
+  
+  .error-icon {
+    color: #dc2626;
+    flex-shrink: 0;
+  }
+  
+  .error-title {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #991b1b;
+    margin: 0 0 0.25rem 0;
+  }
+  
+  .error-message {
+    font-size: 0.875rem;
+    color: #b91c1c;
+    margin: 0 0 0.5rem 0;
+  }
+  
+  .error-help {
+    font-size: 0.875rem;
+    color: #dc2626;
+    margin: 0;
+  }
+  
+  /* Loading Styles */
+  .loading-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .loading-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+  
+  .loading-icon {
+    width: 2rem;
+    height: 2rem;
+    color: #2563eb;
+    animation: spin 1s linear infinite;
+  }
+  
+  .loading-text {
+    font-size: 1.125rem;
+    color: #6b7280;
+  }
+  
+  /* Stats Grid */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .stat-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    border-left: 4px solid #2563eb;
+  }
+  
+  .stat-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .stat-title {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #6b7280;
+    margin: 0 0 0.25rem 0;
+  }
+  
+  .stat-value {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+  }
+  
+  .stat-subtitle {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin: 0.25rem 0 0 0;
+  }
+  
+  .stat-icon {
+    color: #2563eb;
+  }
+  
+  .icon {
+    width: 2rem;
+    height: 2rem;
+  }
+  
+  /* Progress Bar */
+  .progress-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .progress-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #111827;
+    margin: 0 0 1rem 0;
+  }
+  
+  .progress-bar-container {
+    background-color: #e5e7eb;
+    border-radius: 9999px;
+    height: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .progress-bar-fill {
+    background-color: #10b981;
+    height: 100%;
+    border-radius: 9999px;
+    transition: width 0.5s ease;
+  }
+  
+  .progress-text {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin: 0;
+  }
+  
+  /* Main Content Layout */
+  .main-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  @media (min-width: 1024px) {
+    .main-content {
+      grid-template-columns: 2fr 1fr;
+    }
+  }
+  
+  /* Candidates Section */
+  .candidates-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+  }
+  
+  .candidates-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #111827;
+    margin: 0 0 1.5rem 0;
+  }
+  
+  .candidates-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .candidate-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    border: 1px solid #e5e7eb;
+    transition: box-shadow 0.2s;
+  }
+  
+  .candidate-card:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .candidate-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .candidate-photo-container {
+    position: relative;
+    flex-shrink: 0;
+  }
+  
+  .candidate-photo {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #dbeafe;
+  }
+  
+  .candidate-rank {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #2563eb;
+    color: white;
+    font-size: 0.75rem;
+    border-radius: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+  }
+  
+  .candidate-details {
+    flex: 1;
+  }
+  
+  .candidate-name {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #111827;
+    margin: 0 0 0.25rem 0;
+  }
+  
+  .candidate-course {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin: 0 0 0.5rem 0;
+  }
+  
+  .candidate-stats {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .candidate-votes {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #2563eb;
+  }
+  
+  .votes-label {
+    font-size: 0.875rem;
+    color: #6b7280;
+  }
+  
+  .candidate-percentage {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #059669;
+  }
+  
+  .candidate-progress-container {
+    margin-top: 1rem;
+  }
+  
+  .candidate-progress-bar {
+    background-color: #e5e7eb;
+    border-radius: 9999px;
+    height: 0.5rem;
+  }
+  
+  .candidate-progress-fill {
+    background-color: #2563eb;
+    height: 100%;
+    border-radius: 9999px;
+    transition: width 0.3s ease;
+  }
+  
+  /* Winner Section */
+  .winner-card {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    color: white;
+    height: fit-content;
+  }
+  
+  .winner-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .winner-trophy {
+    width: 2rem;
+    height: 2rem;
+  }
+  
+  .winner-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  .winner-info {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  .winner-photo {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    flex-shrink: 0;
+  }
+  
+  .winner-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0 0 0.25rem 0;
+  }
+  
+  .winner-course {
+    font-size: 1.125rem;
+    opacity: 0.9;
+    margin: 0 0 0.25rem 0;
+  }
+  
+  .winner-votes {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  .no-winner {
+    font-size: 1.125rem;
+    margin: 1rem 0 0 0;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .dashboard {
+      padding: 0.5rem;
+    }
+    
+    .header-content {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .header-actions {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+    
+    .stats-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .candidate-content {
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: center;
+    }
+    
+    .candidate-stats {
+      justify-content: center;
+    }
+    
+    .winner-info {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .main-content {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .header-title {
+      font-size: 1.5rem;
+    }
+    
+    .stat-value {
+      font-size: 1.5rem;
+    }
+    
+    .candidate-photo,
+    .winner-photo {
+      width: 3rem;
+      height: 3rem;
+    }
+    
+    .winner-photo {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
