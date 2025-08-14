@@ -13,7 +13,8 @@ const Dashboard = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:3001/api';
+  const API_BASE_URL = 'https://backend-ymgn.onrender.com/api';
+
 
   const loadResults = async () => {
     setLoading(true);
@@ -158,7 +159,7 @@ const Dashboard = () => {
             className="winner-photo"
           />
           <div className="winner-details">
-            <h3 className="winner-name">{winner.name}</h3>
+            <h3 className="winner-name">{winner.name}</h3>npm 
             <p className="winner-course">{winner.course}</p>
             <p className="winner-votes">{winner.votes} Votes</p>
           </div>
